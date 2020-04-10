@@ -1,0 +1,33 @@
+{% extends 'layout.html' %}
+
+{% block title %}
+    <title>LOGIN</title>
+{% endblock %}
+
+{% block body %}
+    <div class="contents-login">
+        <div class="container p-5">
+            <div class="card w-50 mx-auto text-center">
+                <div class="card-header">
+                    <h3>LOGIN</h3>
+                </div>
+                <div class="card-body">
+                    <form action="/login" method="post">
+                        <input type="text" name="username" placeholder="Username" class="form-control"><br>
+                        <input type="text" name="password" placeholder="Password" class="form-control"><br>
+                        
+                        <input type="submit" value="LOGIN" class="btn btn-success btn-block">
+                    </form>
+                </div>
+                <div class="card-footer">
+                    Don't you have your account? <a href="/signupform" class="">Sign Up</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <p><span>&copy;</span>daigo kawabe 2020</p>
+        <a href="#"><img src="/static/img/footer_img.png" alt="footer_icon"></a>
+    </div>
+
+{% endblock %}

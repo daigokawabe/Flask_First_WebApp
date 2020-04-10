@@ -1,0 +1,82 @@
+{% extends 'top_layout.html' %}
+
+{% block title %}
+    <title>Profile</title>
+{% endblock %}
+
+{% block header %}
+    <nav class="navbar navbar-dark bg-dark navbar-expand-lg" style="padding: 20px 250px;">
+        <a class="navbar-brand" href="#">PhotoColle</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+        </button>        
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ url_for('topform') }}">Home 
+                    </a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Profile<span class="sr-only">(current)</span>
+                    </a>
+                </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0 ">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            </form>
+        </div>
+    </nav>
+{% endblock %}
+
+
+{% block main %}
+    <div class="container-fluid p-0">
+        <div id="profile-head">
+            <div class="media">
+                <img class="mr-3" src="/static/img/profile_icon_01.jpg" alt="Generic placeholder image">
+                <div class="media-body">
+                  <h5 class="mt-0">{{userinfo.username}}</h5>
+                  <form action="/profile-edit/{{userinfo.id}}" method="">
+                    <input type="submit" value="Edit Profile" >
+                  </form>
+                  Email: {{userinfo.email}}<br>
+                  Name:  {{userinfo.name}}<br>
+                  Username: {{userinfo.username}}
+                </div>
+              </div>            
+        </div>
+        <div id="profile-menu">
+            <!-- this is profile-menu -->
+            <ul class="nav nav-tabs" id="myTab" role="tablist">
+                <li class="nav-item">
+                  <a class="nav-link" id="post-tab" data-toggle="tab" href="{{ url_for('profileform') }}" role="tab" aria-controls="post" aria-selected="true">Post</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" id="like-tab" data-toggle="tab" href="#" role="tab" aria-controls="like" aria-selected="false">Like</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link active" id="upload-tab" data-toggle="tab" href="#" role="tab" aria-controls="upload" aria-selected="false">Upload</a>
+                </li>
+            </ul>
+              
+            <div class="tab-content">
+                <div class="tab-pane" id="post" role="tabpanel" aria-labelledby="post-tab">
+                </div>
+                <div class="tab-pane" id="like" role="tabpanel" aria-labelledby="like-tab">like tab</div>
+                <div class="tab-pane active" id="upload" role="tabpanel" aria-labelledby="upload-tab">
+                    this is upload
+                    <!-- <form action="" method="POST" enctype = multipart/form-data> -->
+                    <form action="/upload" method="POST" enctype = multipart/form-data>
+                        <input type="file" name="image"><br>
+                        <input type="text" name="tag" placeholder="Tag" class="form-control"><br>
+
+                        <input type="submit" value="Upload"><br><br>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+

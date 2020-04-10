@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css?family=Noto+Serif&display=swap');
+*{
+    box-sizing: border-box;
+    margin: 0;
+}
+.contents{
+    width: 100%;
+    height: 700px;
+    color: whitesmoke;
+    /* border: 2px solid red; */
+    padding: 325px 250px 0px 250px;
+    background-image: url("../img/index_background.jpg");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: top 100%;
+}
+h2{
+    text-align: center;
+}
+.footer{
+    width: 100%;
+    height: 100px;
+    position: relative;
+    background-color: rgb(13, 32, 69);
+    color: white;
+    text-align: center;
+    /* border: 1px solid black; */
+}
+.footer img{
+    display: block;
+    float: right;
+    width: 90px;
+    height: 90px;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+.footer span{
+    display: inline-block;
+    font-size: 18px;
+    padding-top: 25px;
+    padding-right: 5px;
+    /* border: 2px solid red; */
+}
+
+/* ######## login.html  ######## */
+.contents-login{
+    width: 100%;
+    height: 700px;
+    background-image: url("../img/index_background.jpg");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: top 100%;
+}
+/* ######## signup.html  ######## */
+.contents-signup{
+    width: 100%;
+    height: 700px;
+    background-image: url("../img/index_background.jpg");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: top 100%;
+}

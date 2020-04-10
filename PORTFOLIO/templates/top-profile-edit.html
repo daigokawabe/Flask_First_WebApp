@@ -1,0 +1,30 @@
+{% extends 'layout.html' %}
+
+{% block titile %}
+    <title>Edit profile</title>
+{% endblock %}
+
+{% block body %}
+    <div class="container">
+        <!-- <h3>Email      = {{user.email}}</h3>
+        <h3>Name = {{user.name}}</h3>
+        <h3>Username    = {{user.username}}</h3>
+        <h3>Password    = {{user.password}}</h3> -->
+        <form action="/profile-edit/{{user.id}}" method="post">
+            Email <input type="email" name="email" value={{user.email}} class="form-control w-50"><br>
+            Name <input type="text" name="name" value={{user.name}} class="form-control w-50"><br>
+            Username <input type="text" name="username" value={{user.username}} class="form-control w-50"><br>
+            Password <input type="password" name="password" value={{user.password}} class="form-control w-50"><br>
+
+            <input type="submit" value="Update Profile" class="btn btn-success btn-block w-50">
+        </form>
+
+    </div>
+
+{% endblock %}
+{% block footer %}
+    <div class="footer">
+        <p><span>&copy;</span>daigo kawabe 2020</p>
+        <a href="#"><img src="/static/img/footer_img.png" alt="footer_icon"></a>
+    </div>
+{% endblock %}

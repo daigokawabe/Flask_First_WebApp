@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css?family=Noto+Serif&display=swap');
+*{
+    box-sizing: border-box;
+    margin: 0 auto;
+}
+header{
+    position: fixed;
+    z-index: 1;
+    width: 100%;
+}
+
+main{
+    width: 100%;
+    padding: 0px 250px;
+    background-color: whitesmoke;
+    border: 2px dashed white;
+}
+.footer{
+    width: 100%;
+    height: 100px;
+    /* position: fixed; */
+    position: relative;
+    background-color: rgb(13, 32, 69);
+    color: white;
+    text-align: center;
+    /* border: 1px solid yellow; */
+    
+}
+.footer img{
+    display: block;
+    float: right;
+    width: 90px;
+    height: 90px;
+    position: absolute;
+    right: 250px;
+    bottom: 0;
+}
+.footer span{
+    display: inline-block;
+    font-size: 18px;
+    padding-top: 25px;
+    padding-right: 5px;
+    /* border: 2px solid red; */
+}
+
+/* ########## top.html ############ */
+#timeline{
+    border-right: 1px solid lightgray;
+    border-left: 1px solid lightgray;
+    /* height: 600px; */
+}
+/* .timeline-newinfo{
+    border: 3px dotted violet;
+}
+.timeline-main{
+    border: 3px dashed tomato;
+} */
+#sidebar{
+    /* border-right: 1px solid lightgray; */
+    /* height: 600px; */
+    position: fixed;
+    z-index: 1;
+
+}
+.sidebar-profile{
+    border: 2px groove lightgray;
+    background-color: lightgray;
+    width: 100%;
+
+}
+/* .sidebar-suggestion{
+    border: 2px dashed orange;
+} */
+
+.mr-3{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+}
+
+/* ########## top_profile.html ############ */
+#profile-head{
+    /* border: 2px solid darkblue;     */
+    background-color: lightgray;
+}
+#profile-menu{
+    border-right: 1px solid lightgray;    
+    border-left: 1px solid lightgray;    
+}
+#posts{
+    border: 1px solid lightgray;    
+}
